@@ -1,29 +1,25 @@
 """
-HW2 - Variables, Math, Output, If statements, Loops, Logic
-Problems: 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 3.4, 3.9, 3.11, 3.12, 3.14
+HW2 Layla Abdulmohsin Sep 23 2026
 """
 
-# ===============================================================
-# Chapter 2 Problems: Variables, Math, Output
-# ===============================================================
 
-# 2.3 Print a congratulations message if the grade is an A (90 or above)
+# 2.3 
 grade = 91
 if grade >= 90:
     print(f"Congratulations! Your grade of {grade} earns you an A in this course")
 
 
-# 2.4 Show the result of each arithmetic operator with 27.5 (left) and 2 (right)
+# 2.4 AI disclaimer: it was used to get the right order of operations, like which number comes before the operator, it was used after my own code was written
 print("\n2.4 Arithmetic")
 print("27.5 + 2  =", 27.5 + 2)     # addition
 print("27.5 - 2  =", 27.5 - 2)     # subtraction
 print("27.5 * 2  =", 27.5 * 2)     # multiplication
 print("27.5 / 2  =", 27.5 / 2)     # true division
-print("27.5 // 2 =", 27.5 // 2)    # floor division
-print("27.5 ** 2 =", 27.5 ** 2)    # exponentiation
+print("27.5 // 2 =", 27.5 // 2)    
+print("27.5 ** 2 =", 27.5 ** 2)    
 
 
-# 2.5 Diameter, circumference and area of a circle with radius 2
+# 2.5 AI disclaimer: it was used to help me on line 28
 print("\n2.5 Circle")
 radius = 2
 pi = 3.14159
@@ -35,16 +31,16 @@ print("Circumference:", circumference)
 print("Area:", area)
 
 
-# 2.6 Use if statements to decide whether an integer is odd or even
+# 2.6 
 print("\n2.6 Odd or even")
-integer = 7                      # change this value to test other integers
-if integer % 2 == 0:             # even numbers leave a remainder of 0 when divided by 2
+integer = 7                      
+if integer % 2 == 0:             # even numbers will leave a remainder of 0 when divided by 2
     print(integer, "is even")
-if integer % 2 != 0:             # otherwise the number is odd
+if integer % 2 != 0:             # if not this means otherwise the number is odd
     print(integer, "is odd")
 
 
-# 2.7 Use if statements to check multiples with the remainder operator
+# 2.7 
 print("\n2.7 Multiples")
 if 1024 % 4 == 0:
     print("1024 is a multiple of 4")
@@ -57,26 +53,21 @@ else:
     print("2 is not a multiple of 10")
 
 
-# 2.8 Table of squares and cubes for 0 to 5, using the tab escape sequence (\t)
+# 2.8 
 print("\n2.8 Squares and cubes")
 print("number\tsquare\tcube")
 for number in range(6):
     print(f"{number}\t{number ** 2}\t{number ** 3}")
-
-
-# ===============================================================
-# Chapter 3 Problems: If statements, Loops, Logic
-# ===============================================================
-
-# 3.4 Nested loops: two rows of seven @ symbols
+    
+# 3.4 
 print("\n3.4 Rows of @")
 for row in range(2):                # outer loop: 2 rows
     for column in range(7):         # inner loop: 7 symbols per row
-        print('@', end='')          # end='' keeps the symbols on the same line
-    print()                         # move to the next line after each row
+        print('@', end='')          
+    print()                         # move to the next line after each row is printed on screeen
 
 
-# 3.9 Separate the digits of a 7 to 10 digit integer, left to right
+# 3.9 AI disclaimer, it was used to help on the aggregation part in lines 80-83
 print("\n3.9 Separating the digits")
 text = input("Enter a number 7 to 10 digits: ")
 
@@ -91,7 +82,7 @@ else:
         divisor = divisor // 10          # move to the next place value
 
 
-# 3.11 Miles per gallon, using a sentinel value (-1) to end the loop
+# 3.11 
 print("\n3.11 Miles per gallon")
 total_miles = 0
 total_gallons = 0
@@ -108,7 +99,7 @@ if total_gallons > 0:                    # only report if at least one tank was 
     print(f"The overall average miles/gallon was {total_miles / total_gallons:.6f}")
 
 
-# 3.12 Palindrome check for a five-digit integer (read as a string, no [::-1])
+# 3.12 
 print("\n3.12 Palindromes")
 text = input("Enter a five-digit integer: ")
 
@@ -116,7 +107,7 @@ if len(text) != 5 or not text.isdigit():
     print("Please enter exactly five digits.")
 else:
     is_palindrome = True
-    # compare the first character with the last, the second with the second to last, etc.
+    # compare the first character with the last and so on
     for i in range(len(text) // 2):
         if text[i] != text[len(text) - 1 - i]:
             is_palindrome = False
@@ -126,7 +117,7 @@ else:
         print(text, "is not a palindrome")
 
 
-# 3.14 Approximate pi with the series: pi = 4 - 4/3 + 4/5 - 4/7 + 4/9 - 4/11 + ...
+# 3.14 AI disclaimer the comments took my a very long time to get right so it helped with checking the rows accurately. 
 #
 # Approximations are truncated (not rounded) to 2 or 3 decimal places before checking.
 # ANSWERS (number of terms used):
@@ -138,9 +129,9 @@ print("\n3.14 Approximating pi")
 print("terms\tapproximation")
 
 pi_approx = 0
-sign = 1                                # the series alternates + and -
-previous_2 = 0                          # previous approximation truncated to 2 decimals
-previous_3 = 0                          # previous approximation truncated to 3 decimals
+sign = 1                                
+previous_2 = 0                         
+previous_3 = 0                         
 found_314 = False
 found_3141 = False
 
@@ -163,5 +154,5 @@ for terms in range(1, 3001):
     previous_2 = current_2
     previous_3 = current_3
 
-    if found_314 and found_3141:                # nothing more to find, stop early
+    if found_314 and found_3141:                # nothing else, so stop early
         break
