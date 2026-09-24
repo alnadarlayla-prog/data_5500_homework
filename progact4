@@ -1,1 +1,84 @@
+# Q 1
+denominator = 1
+total = 0
+
+for i in range(1, 1001):         
+    denominator = denominator * 2 
+    total = total + 1 / denominator
+
+print(total)
+
+
+# Q 2
+colors = ["blue", "pink", "hot pink", "teal", "chrome"]
+for color in colors:
+  print(colors)
+
+# Q 3
+colors = ["blue", "pink", "hot pink", "teal", "chrome"]
+
+for color in colors: 
+  print(color)
+  for character in color:
+      print(character)
+
+# Q 4
+import random
+
+numbers = []
+
+for i in range(10):
+    numbers.append(random.randit(1,100))
+
+print(numbers)
+
+# Q 5
+import random
+numbers = []
+
+for i in range(10):
+    numbers.append(random.randint(1, 100))
+
+print(numbers)
+
+for count in range(len(numbers) - 1):       
+    if numbers[count] % 2 == 0 and numbers[count + 1] % 2 == 0:
+        print(numbers[count], numbers[count + 1])
+
+# Q 6
+evennumberslist = [n for n in range(2, 101) if n % 2 == 0]
+
+#Q7
+stringlist = [" spring", "summer ", "fall ", "winter "]
+gapless = [word.strip() for word in stringlist]
+
+print(gapless)
+
+#Q 8
+age = int(input("Enter the child's age: "))
+weight = float(input("Enter the child's weight in pounds: "))
+
+is12orolder = age >= 12
+is11andover90 = age == 11 and weight > 90
+is_under_11_and_over_100 = age < 11 and weight > 100
+
+if is_12_or_older or is_11_and_over_90 or is_under_11_and_over_100:
+    print("The child may sit in the front seat.")
+else:
+  print("The child may not sit in the front seat.")
+
+# BONUS QQS
+
+start = int(input("Enter the start of the range: "))
+end = int(input("Enter the end of the range: "))
+
+for num in range(start + 1):
+    if num > 1:                          
+        is_prime = True
+        for divisor in range(2, int(num ** 0.5) + 1):
+            if num % divisor == 0:     
+                is_prime = False
+                
+        if is_prime:
+            print(num)
 
